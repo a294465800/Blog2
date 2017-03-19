@@ -1,0 +1,11 @@
+<nav>
+    <ul class="pager">
+        <li class="previous"><a href="/admin/{{forPage}}?page={% if (page-1)<1 %}{{1}}{%else%}{{page-1}}{%endif%}"><span aria-hidden="true">&larr;</span> 上一页</a></li>
+
+        <li>
+            一共有<b>{{count}}</b>条数据&nbsp;&nbsp;&nbsp;&nbsp;每页显示<b>{{limit}}</b>条数据&nbsp;&nbsp;&nbsp;&nbsp;共<b>{{pages}}</b>页&nbsp;&nbsp;&nbsp;&nbsp;当前第<b>{{page}}</b>页
+        </li>
+
+        <li class="next"><a href="/admin/{{forPage}}?page={% if (page+1)>pages %}{{pages}}{% else %}{{page+1}}{%endif%}">下一页 <span aria-hidden="true">&rarr;</span></a></li>
+    </ul>
+</nav>
